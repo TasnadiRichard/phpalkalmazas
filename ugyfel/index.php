@@ -1,15 +1,17 @@
-<?php
-
-switch ($_SERVER['REQUEST_METHOD']) {
+<?php 
+switch ($_SERVER['REQUEST_METHOD']){
     case 'GET':
-        if (count($kereSzoveg)>1) {
-            $sql='SELECT * FROM ugyfel WHERE azon='.$kereSzoveg[1];
-        }
-        
-        require_once '';
-
+        require_once 'ugyfel/getugyfel.php';
         break;
-
-        default:
+    case 'POST':
+        require_once 'ugyfel/postugyfel.php';
+        break;
+    case 'DELETE':
+        require_once 'ugyfel/deleteugyfel.php';
+        break;
+    case 'PUT':
+        require_once 'ugyfel/putugyfel.php';
+        break;
+    default:
         break;
 }

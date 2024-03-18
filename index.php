@@ -18,7 +18,7 @@ DELETE http://localhost/phpalkalmazas/index.php?ugyfel/(id) -> adott id torlese
 //    var_dump($_SERVER['REQUEST_METHOD']);
 //    var_dump($_SERVER['QUERY_STRING']);
     $kereSzoveg = explode('/', $_SERVER['QUERY_STRING']);
-    if ($kereSzoveg[0]=== 'ugyfel') {
+    if ($kereSzoveg[0]=== "ugyfel") {
         require_once 'ugyfel/index.php';
     } else {
         http_response_code(404);
