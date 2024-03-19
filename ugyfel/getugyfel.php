@@ -1,8 +1,8 @@
 <?php
 // Összes ügyfél adatai JSON
 $sql = '';
-if(count($keresSzoveg) > 1){
-    if(is_int(intval($keresSzoveg[1]))){
+if(count($kereSzoveg) > 1){
+    if(is_int(intval($kereSzoveg[1]))){
         $sql = "SELECT * FROM ugyfel WHERE azon=" . $kereSzoveg[1];
     }else{
         http_response_code(404);
